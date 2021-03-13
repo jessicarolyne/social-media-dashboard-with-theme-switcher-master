@@ -1,0 +1,155 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;
+}
+header .titulo-header .titulo{
+    color: var(--colordark);
+}
+header .titulo-header p{
+    color: var(--colordarklight);
+    font-weight: 700;
+}
+header .botao{
+    display: flex;
+    align-items: center;
+    color: var(--colordarklight);
+    font-weight: 700;
+    font-size: 16px;
+}
+header .botao input[type=checkbox]{
+    -webkit-appearance: none;
+    width: 90px;
+    height: 40px;
+    border-radius: 100px;
+    margin-left: 20px;
+    background: var(--btndark);
+    cursor: pointer;
+    outline: 0;
+    position: relative;
+}
+header .botao input[type=checkbox]::before{
+    content: '';
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+    transform: translateX(50px) scale(0.8);
+    background: var(--bglight);
+    position: absolute;
+    transition: transform 0.3s;
+}
+header .botao input[type=checkbox]:checked::before{
+    transform: translateY(0) scale(0.8);
+}
+main .seguidores,
+main .grid-visao-geral{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 30px;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    background: var(--bglightcard);
+    position: relative;
+}
+.card:hover{
+    background: var(--bglightcardhover);
+}
+.card::before{
+    content: '';
+    position: absolute;
+    height: 5px;
+    border-radius: 8px 8px 0 0;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+/*Topo dos cards*/
+.card.facebook::before{
+    background: var(--Facebook);
+}
+.card.twitter::before{
+    background: var(--Twitter);
+}
+.card.instagram::before{
+    background: var(--Instagram);
+}
+.card.youtube::before{
+    background: var(--Youtube);
+}
+/*Cards*/
+.card .usuario{
+    display: flex;
+    justify-content: center;
+    color: var(--colordarklight);
+}
+.card .usuario img{
+    margin-right: 10px;
+}
+.card .contador{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 25px 0;
+    font-size: 1.1em;
+    font-weight: 400;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--colordarklight);
+}
+.card .contador span{
+    font-size: 4em;
+    font-weight: 700;
+    letter-spacing: 0;
+    color: var(--colordark);
+}
+.card span{
+    display: flex;
+    align-items: center;
+    color: var(--Green);
+    font-weight: 700;
+}
+.card span img{
+    margin-right: 5px;
+}
+.card span.down{
+    color: var(--Red);
+}
+main .visao-geral{
+    margin-top: 50px;
+}
+main .visao-geral h2{
+    color: var(--colordark);
+    font-size: 1.7em;
+}
+.grid-visao-geral{
+    margin: 20px 0;
+}
+.grid-visao-geral .card .titulo{
+    margin-bottom: 20px;
+}
+.grid-visao-geral .card .titulo span{
+    font-size: 1.1em;
+    color: var(--colordarklight);
+}
+.grid-visao-geral .card .titulo,
+.grid-visao-geral .card .texto-card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; 
+}
+.grid-visao-geral .card .texto-card{
+    align-items: baseline;
+}
+.grid-visao-geral .card .texto-card p{
+    font-size: 2.8em;
+    font-weight: 700;
+    color: var(--colordark);
+}
