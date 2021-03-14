@@ -42,7 +42,7 @@ header .botao input[type=checkbox]::before{
 header .botao input[type=checkbox]:checked::before{
     transform: translateY(0) scale(0.8);
 }
-main .seguidores,
+main .seguidores div,
 main .grid-visao-geral{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -152,4 +152,48 @@ main .visao-geral h2{
     font-size: 2.8em;
     font-weight: 700;
     color: var(--colordark);
+}
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    color: var(--colordarklight);
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+    text-decoration: none;
+}
+/*Media Queries*/
+@media screen and (max-width:1170px){
+    header{
+        display: block;
+    }
+    header .botao{
+        padding-top: 20px;
+        border-top: 1px solid;
+        border-color: var(--colordarklight);
+        justify-content: space-between;
+        align-items: center;
+    }
+    main .seguidores div,
+    main .grid-visao-geral{
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 30px;
+    }
+}
+@media screen and (max-width:768px){
+    header{
+        display: block;
+    }
+    header .botao{
+        padding-top: 20px;
+        border-top: 1px solid;
+        border-color: var(--colordarklight);
+        justify-content: space-between;
+        align-items: center;
+    }
+    main .seguidores div,
+    main .grid-visao-geral{
+        grid-template-columns: 1fr;
+        grid-gap: 30px;
+    }
 }
